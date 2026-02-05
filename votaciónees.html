@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Votación Presidencial</title>
+<style>
+  body { background-color: #05141c; color: white; font-family: sans-serif; margin: 0; display: flex; justify-content: center; min-height: 100vh; }
+  .voting-wrapper { width: 100%; max-width: 500px; padding: 30px 20px; text-align: center; }
+  header h1 { color: #007bff; font-size: 24px; margin-bottom: 5px; }
+  header p { color: #8e8e8e; font-size: 14px; margin-bottom: 30px; }
+  .candidates-grid { display: flex; flex-direction: column; gap: 15px; }
+  .card { background-color: #1c2b33; border: 1px solid #344750; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+  .avatar { width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; color: white; }
+  .color-1 { background: linear-gradient(45deg, #ff0099, #493240); }
+  .color-2 { background: linear-gradient(45deg, #00dbde, #fc00ff); }
+  .color-3 { background: linear-gradient(45deg, #f89b29, #ff0f7b); }
+  .vote-count { background: rgba(0, 0, 0, 0.2); padding: 10px 20px; border-radius: 8px; margin-bottom: 15px; width: 80%; }
+  .number { display: block; font-size: 24px; font-weight: bold; color: #ffffff; }
+  .highlight { color: #00c853; }
+  .label { font-size: 11px; color: #888; text-transform: uppercase; }
+  .vote-btn { background-color: #007bff; color: white; border: none; border-radius: 6px; padding: 12px; width: 100%; font-weight: bold; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<div class="voting-wrapper">
+  <header>
+    <h1>Elecciones Presidenciales</h1>
+    <p>Resultados parciales y votación final.</p>
+  </header>
+
+  <div class="candidates-grid">
+    <div class="card">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="313eeadd-5a53-4537-b05d-203ad7fff802">
+        <input type="hidden" name="redirect" value="https://www.google.com"> <div class="avatar color-1">S</div>
+        <h2>Sophia Alejandra Rodriguez</h2>
+        <div class="vote-count"><span class="number">195</span><span class="label">Votos</span></div>
+        <input type="hidden" name="VOTO_POR" value="Sophia Alejandra Rodriguez">
+        <button type="submit" class="vote-btn">Votar por Sophia</button>
+      </form>
+    </div>
+    
+    <div class="card">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="313eeadd-5a53-4537-b05d-203ad7fff802">
+        <input type="hidden" name="redirect" value="https://www.google.com"> <div class="avatar color-2">V</div>
+        <h2>Victoria Aurora Valle</h2>
+        <div class="vote-count"><span class="number highlight">197</span><span class="label">Votos</span></div>
+        <input type="hidden" name="VOTO_POR" value="Victoria Aurora Valle">
+        <button type="submit" class="vote-btn">Votar por Victoria</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="313eeadd-5a53-4537-b05d-203ad7fff802">
+        <input type="hidden" name="redirect" value="https://www.google.com"> <div class="avatar color-3">A</div>
+        <h2>Agustin Lopez Reyes</h2>
+        <div class="vote-count"><span class="number">32</span><span class="label">Votos</span></div>
+        <input type="hidden" name="VOTO_POR" value="Agustin Lopez Reyes">
+        <button type="submit" class="vote-btn">Votar por Agustin</button>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
